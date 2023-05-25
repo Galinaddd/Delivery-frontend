@@ -1,16 +1,15 @@
+import { Route, Routes } from 'react-router-dom';
+import { ShoppingCartPage, ShopsPage, NotFoundPage } from '../pages';
+import { SharedLayout } from '../components';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route path="/" index element={<ShopsPage />} />
+        <Route path="/cart" element={<ShoppingCartPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 };
