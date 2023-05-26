@@ -20,11 +20,10 @@ const ShopsPage = () => {
   console.log('goods in shopepage', goodsList);
 
   return (
-    <div>
-      <h1>ShopsPage</h1>
+    <>
       <ShopList shops={shopList} onClick={handleClickShopButton} />
       <GoodsList goods={goodsList} />
-    </div>
+    </>
   );
 };
 export { ShopsPage };

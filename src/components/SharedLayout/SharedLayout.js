@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from '../index';
+import { Container } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
@@ -7,9 +8,9 @@ const SharedLayout = () => {
       <header>
         <Navigation />
       </header>
-      <main>
+      <Container>
         <Outlet />
-      </main>
+      </Container>
       <footer>
         <>
           <h2>it is footer</h2>
