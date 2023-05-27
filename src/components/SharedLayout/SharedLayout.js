@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Navigation } from '../index';
-import { Container } from './SharedLayout.styled';
+import { Container, Footer } from './SharedLayout.styled';
 
 const SharedLayout = () => {
   return (
@@ -11,11 +11,11 @@ const SharedLayout = () => {
       <Container>
         <Outlet />
       </Container>
-      <footer>
+      <Footer>
         <>
-          <h2>it is footer</h2>
+          <h4>Delivery</h4>
         </>
-      </footer>
+      </Footer>
     </>
   );
 };
